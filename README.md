@@ -1,5 +1,5 @@
 # FundXirr
-利用XIRR算法计算基金定投年化收益率
+利用XIRR算法，爬取基金公司交易数据，计算基金定投年化收益率
 
 - 目前支持: 
   - 蛋卷基金(支持组合代码[DanjuanPlan类] 和 独立基金代码[DanjuanFund类])， 比如螺丝钉组合DanjuanPlan("CSI666")
