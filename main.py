@@ -285,7 +285,6 @@ class RuiyuanFund(Fund):
 
 def main(*funds):
     total = 0
-    print("截止 {:%Y-%m-%d}".format(datetime.datetime.now()))
     pret = []
     fret = []
     for fund in funds:
@@ -298,14 +297,14 @@ def main(*funds):
         pret.append((x.calc_rate(), int(fund.total_assets), fund.pk, fund.name))
         total += int(fund.total_assets)
 
+    print("截止 {:%Y-%m-%d} 总市值: {}".format(datetime.datetime.now(), total))
+
     for i in fret:
         print("年化收益率: {:>5.2f}%  市值: {:>6d}  基金代码 {:>6s} {:<30s}".format(i[0], i[1], i[2], i[3]))
 
     print()
     for i in pret:
         print("年化收益率: {:>5.2f}%  市值: {:>6d}  基金代码 {:>6s} {:<30s}".format(i[0], i[1], i[2], i[3]))
-
-    print("\n总市值: {}".format(total))
 
 
 if __name__ == "__main__":
